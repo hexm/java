@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 3.0//EN" "http://getahead.org/dwr/dwr30.dtd">
+<dwr>
+	<allow>
+		<create creator="new" javascript="service">
+			<param name="class" value="com.icbc.hexm.swu.DwrTest" />
+		</create>
+		<create creator="new">
+			<param name="class" value="com.icbc.hexm.swu.DwrTest2" />
+		</create>
+		<create creator="new">
+			<param name="class" value="com.icbc.hexm.swu.controller.StudentManager" />
+		</create>
+		<create creator="new">
+			<param name="class" value="com.icbc.hexm.lsp.controller.LspStudentManager" />
+		</create>
+		<convert match="com.icbc.hexm.swu.bean.Student"
+			converter="bean">
+		</convert>
+		<convert match="org.directwebremoting.DwrExceptionInfo"
+			converter="bean">
+		</convert>
+	</allow>
+</dwr>
